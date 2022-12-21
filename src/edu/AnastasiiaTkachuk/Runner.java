@@ -12,10 +12,12 @@ public class Runner {
     }
 
     private static void threadPoolMethod() throws InterruptedException {
-        ExecutorService threadExecutor = Executors.newFixedThreadPool(2);
+        ExecutorService threadExecutor = Executors.newSingleThreadExecutor();
 
         Scanner console = new Scanner(System.in);
+        System.out.println("Введите число: ");
         while(console.hasNextInt()){
+            System.out.println("Введите число: ");
             int seconds = console.nextInt();
             if(seconds < 0 ){
                 break;
